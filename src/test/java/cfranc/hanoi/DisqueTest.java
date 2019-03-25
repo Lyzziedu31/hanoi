@@ -16,4 +16,27 @@ public class DisqueTest {
 		//TODO : à compléter
 	}
 
+	@Test
+	public void compareTo_SmallMedium_false(){
+		Disque small = new Disque (1);
+		Disque medium = new Disque (2);
+		int expected = -1;
+		int actual= small.compareTo(medium);
+	}
+
+	@Test
+	public void compareTo_MediumSmall_True(){
+		Disque small = new Disque (1);
+		Disque medium = new Disque (2);
+		int expected = 1;
+		int actual= small.compareTo(medium);
+	}
+
+	@Test
+	public void compareTo_MediumSmall_Equals(){
+		Disque small1 = new Disque (1);
+		Disque small2 = new Disque (1);
+		int expected = 0;
+		int actual= small1.compareTo(small2);
+	}
 }
